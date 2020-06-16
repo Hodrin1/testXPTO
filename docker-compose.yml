@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  server:
+    image: registry.gitlab.com/lorem-todo/todo-api:latest
+    restart: on-failure
+    environment:
+      - DEBUG=mock*
+    ports:
+      - 8000:8000
+  
